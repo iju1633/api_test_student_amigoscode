@@ -7,13 +7,13 @@ import java.time.LocalDate;
 @Table
 public class Student { // model 역할!
 
-    @Id
-    @SequenceGenerator(
+    @Id // 기본키로 설정
+    @SequenceGenerator( // DB에 데이터마다 번호 붙여지는 효관
             name = "student_sequence",
             sequenceName = "student_sequence",
             allocationSize = 1
     )
-    @GeneratedValue(
+    @GeneratedValue( // 확실히 이해 못함
             strategy = GenerationType.SEQUENCE,
             generator = "student_sequence"
     )
@@ -23,7 +23,7 @@ public class Student { // model 역할!
     private LocalDate dob;
     private Integer age;
 
-    public Student() {
+    public Student() { // 기본 생성자가 있어야 @Entity 사용 가능
     }
 
     public Student(long id, String name, String email, LocalDate dob, Integer age) {

@@ -11,9 +11,9 @@ import java.util.List;
 @RequestMapping(path= "api/v1/student") // 아무것도 안하면 localhost:8080에 잡힘
 public class StudentController { // api에 필요한 모든 리소스들이 들어 있는 곳
 
-    private final StudentService studentService;
+    private final StudentService studentService; // Service와 잇기 위해 선언
 
-    @Autowired // final로 설정한 것이 아래 매개변수와 연결됨!
+    @Autowired // final로 설정한 것이 아래 매개변수와 연결됨!(객체 생성해서 Dependency Injection 해줌)
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
