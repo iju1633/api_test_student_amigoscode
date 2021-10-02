@@ -50,7 +50,7 @@ public class StudentService { // 핵심 로직인 있는 곳
         studentRepository.deleteById(studentId);
     }
 
-    @Transactional // 쿼리문을 작성할 필요가 없게 됨, 더욱 자세히 알아볼 것!
+    @Transactional // 더욱 자세히 알아볼 것 -> 노션 참고
     public void updateStudent(Long studentId, String name, String email) {
 
         // 받은 id값으로 student가 있으면 객체 생성하고 아님 에러 보내기

@@ -1,5 +1,7 @@
 package start.demo.student;
 
+import org.springframework.context.annotation.Bean;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;

@@ -10,6 +10,6 @@ import java.util.Optional;
 public interface StudentRepository extends JpaRepository<Student, Long> { // Data access를 위한 인터페이스!
     // Db와 소통하는 창구, Student라는 class와 DB작업을 할 것이고, primary key인 id의 형식이 Long이니까
 
-    @Query("SELECT s from Student s where s.email = ?1")
+    @Query("SELECT s from Student s where s.email = ?1") // 명시화함, 없어도 되긴 함, ?1을 이해잘 못함..ㅠ
     Optional<Student> findStudentByEmail(String email);
 }

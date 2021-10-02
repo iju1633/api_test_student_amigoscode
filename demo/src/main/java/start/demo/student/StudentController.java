@@ -16,6 +16,7 @@ public class StudentController { // api에 필요한 모든 리소스들이 들�
         this.studentService = studentService;
     }
 
+
     @GetMapping// 요청 들어오면 해야할 것으로 설정됨^^(이해)
     public List<Student> getStudents() {
         return studentService.getStudents();
